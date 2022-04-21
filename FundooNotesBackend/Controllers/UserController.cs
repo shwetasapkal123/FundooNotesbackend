@@ -44,7 +44,7 @@ namespace FundooNotesBackend.Controllers
             }
         }
 
-        [HttpPost("login")]
+        [HttpPost("login/{email}/{password}")]
         public IActionResult Login(UserLogin userLogin)
         {
             try
