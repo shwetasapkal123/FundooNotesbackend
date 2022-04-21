@@ -1,0 +1,15 @@
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.deps.json
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.pdb
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Database Layer.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Database Layer.pdb
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.csproj.AssemblyReference.cache
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.AssemblyInfoInputs.cache
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.AssemblyInfo.cs
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.csproj.CoreCompileInputs.cache
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.csproj.CopyComplete
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.pdb
