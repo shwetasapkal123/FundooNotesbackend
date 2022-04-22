@@ -12,5 +12,7 @@ namespace Buisness_Layer.Interfaces
         //interface method(doesnot have body)
         public User AddUser(UserPostModel user);
         public string Login(UserLogin userLogin);
+        public bool ForgetPassword(string email);
+        public bool ChangePassword(string email, string password, string confirmPassword);
     }
 }

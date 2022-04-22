@@ -1,4 +1,6 @@
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.deps.json
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.runtimeconfig.json
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.runtimeconfig.dev.json
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Buisness Layer.pdb
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\bin\Debug\netcoreapp3.1\Database Layer.dll
@@ -13,3 +15,4 @@ C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.csproj.CopyComplete
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.pdb
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\Buisness Layer\obj\Debug\netcoreapp3.1\Buisness Layer.genruntimeconfig.cache
