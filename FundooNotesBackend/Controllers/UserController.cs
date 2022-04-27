@@ -46,7 +46,7 @@ namespace FundooNotesBackend.Controllers
                 throw ex;
             }
         }
-
+        //Post Request For Login Existing User(POST:/user/login/{email}/{password}
         [HttpPost("login/{email}/{password}")]
         public IActionResult Login(UserLogin userLogin)
         {
@@ -64,8 +64,8 @@ namespace FundooNotesBackend.Controllers
                 throw ex;
             }
         }
-
-        [HttpPost("ForgotPassword")]
+        //Post Request For Forgot Password Existing User (POST: /user/forgotpassword/{email})
+        [HttpPost("ForgotPassword/{email}")]
         public IActionResult ForgotPassword(string email)
         {
             try
@@ -82,44 +82,90 @@ namespace FundooNotesBackend.Controllers
                 throw ex;
             }
         }
+        //[Authorize]
+        //[HttpPut("ChangePassword")]
+        //public IActionResult ChangePassword(string password,string confirmpassword)
+        //{
+        //    try
+        //    {
+        //        //var email = User.FindFirst(ClaimTypes.Email).Value.ToString();
+        //        //var userid = User.Claims.FirstOrDefault(x => x.Type.ToString().Equals("userId", StringComparison.InvariantCultureIgnoreCase));
+        //        //int userId = Int32.Parse(userid.Value);
+        //        //bool res = userBL.ChangePassword(email, password, confirmpassword);
+
+        //        //if (!res)
+        //        //{
+        //        //    return this.BadRequest(new { success = false, message = "enter valid password" });
+
+        //        //}
+        //        //else
+        //        //{
+        //        //    return this.Ok(new { success = true, message = "reset password set successfully" });
+        //        //}
+        //        var identity = User.Identity as ClaimsIdentity;
+        //        if (identity != null)
+        //        {
+        //            IEnumerable<Claim> claims = identity.Claims;
+        //            var UserEmailObject = claims.Where(p => p.Type == @"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").FirstOrDefault()?.Value;
+        //            this.userBL.ChangePassword(UserEmailObject, password, confirmpassword);
+        //            return Ok(new
+        //            {
+        //                success = true,
+        //                message = "Password Changed Sucessfully", email = $"{ UserEmailObject}" });
+        //        }
+        //        return Ok(new { success = false, message = "Password Changed Unsuccessful" });
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        //Put Request For Resetting Password For Existing User (PUT: /user/resetpassword/{resetPassword})
         [Authorize]
-        [HttpPut("ChangePassword")]
-        public IActionResult ChangePassword(string password,string confirmpassword)
+        [HttpPut("ResetPassword/{resetPassword}")]
+        // For Authorized User Only
+        public IActionResult ResetPassword(string password, string confirmpassword)
         {
             try
             {
-                //var email = User.FindFirst(ClaimTypes.Email).Value.ToString();
+                //Check email and give access by using Claim method
+                var currentUser = HttpContext.User;
+                int userId = Convert.ToInt32(currentUser.Claims.FirstOrDefault(c => c.Type == "UserId").Value);
+                var email = (currentUser.Claims.FirstOrDefault(c => c.Type == "Email").Value);
                 //var userid = User.Claims.FirstOrDefault(x => x.Type.ToString().Equals("userId", StringComparison.InvariantCultureIgnoreCase));
                 //int userId = Int32.Parse(userid.Value);
-                //bool res = userBL.ChangePassword(email, password, confirmpassword);
+                bool res = userBL.ResetPassword(email, password, confirmpassword);
 
-                //if (!res)
-                //{
-                //    return this.BadRequest(new { success = false, message = "enter valid password" });
-
-                //}
-                //else
-                //{
-                //    return this.Ok(new { success = true, message = "reset password set successfully" });
-                //}
-                var identity = User.Identity as ClaimsIdentity;
-                if (identity != null)
+                if (!res)
                 {
-                    IEnumerable<Claim> claims = identity.Claims;
-                    var UserEmailObject = claims.Where(p => p.Type == @"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress").FirstOrDefault()?.Value;
-                    this.userBL.ChangePassword(UserEmailObject, password, confirmpassword);
-                    return Ok(new
-                    {
-                        success = true,
-                        message = "Password Changed Sucessfully", email = $"{ UserEmailObject}" });
-                }
-                return Ok(new { success = false, message = "Password Changed Unsuccessful" });
+                    return this.BadRequest(new { success = false, message = "enter valid password" });
 
+                }
+                else
+                {
+                    return this.Ok(new { success = true, message = "reset password set successfully" });
+                }
             }
             catch (Exception ex)
             {
-                throw ex;
+                return NotFound(new { success = false, message = ex.Message });
             }
+        }
+        [HttpGet("getallusers")]
+        public ActionResult GetAllUsers()
+        {
+            try
+            {
+                var result = this.userBL.GetAllUsers();
+                return this.Ok(new { success = true, message = $"Below are the User data", data = result });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
         }
     }
 }

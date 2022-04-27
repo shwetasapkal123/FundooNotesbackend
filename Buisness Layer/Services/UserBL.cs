@@ -55,13 +55,26 @@ namespace Buisness_Layer.Services
             
         }
 
-        public bool ChangePassword(string email, string password, string confirmPassword)
+        //public bool ChangePassword(string email, string password, string confirmPassword)
+        //{
+        //    try
+        //    {
+        //        return userRL.ChangePassword(email, password, confirmPassword);
+        //    }
+        //    catch(Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        //Method To Call And Return Reset Password For Authorized User 
+        public bool ResetPassword(string password, string confirmpassword,string Email)
         {
             try
             {
-                return userRL.ChangePassword(email, password, confirmPassword);
+                return this.userRL.ResetPassword(password, confirmpassword,Email);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

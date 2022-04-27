@@ -17,15 +17,19 @@ namespace RepositoryLayer.UserClass
 {
     public class UserRL : IUserRL
     {
+        // Created The User Repository Layer Class To Implement IUserRL Methods
+        // Reference Object For FundooContext And IConfiguration
         FundooContext fundoo;
         private readonly IConfiguration Toolsettings;
-        private static string Key = "47c53aa7571c33d2f98d02a4313c4ba1ea15e45c18794eb564b21c19591805ff";
-        //Constructor
+
+        //Created Constructor To Initialize Fundoocontext For Each Instance
         public UserRL (FundooContext fundoo, IConfiguration Toolsettings)
         {
             this.fundoo = fundoo;
             this.Toolsettings = Toolsettings;
         }
+
+        // Method to register user with new user data into the db table
         public User AddUser(UserPostModel user)
         {
             // throw new NotImplementedException();
@@ -57,45 +61,6 @@ namespace RepositoryLayer.UserClass
                 throw ex;
             }
         }
-
-        //public string LoginUser(string email, string password)
-        //{
-        //    //throw new NotImplementedException();
-        //    try
-        //    {
-        //        var result=fundoo.Users.FirstOrDefault(u=>u.email==email && u.password==password);
-        //        if (result==null)
-        //        {
-        //            return null;
-        //        }
-        //        return GenJWTToken(email,result.Id);
-        //        //string password=password;
-        //    }
-        //    catch(Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-        //public static string GenJWTToken(string email, string Id)
-        //{
-        //    var tokenHandler = new JwtSecurityTokenHandler();
-        //    var tokenKey = Encoding.ASCII.GetBytes("THIS_IS_MY_KEY_TO_GENERATE_TOKEN");
-        //    var tokenDescriptor = new SecurityTokenDescriptor
-        //    {
-        //        Subject = new ClaimsIdentity(new Claim[]
-        //        {
-        //            new Claim("email", email),
-        //            new Claim("userId",Id.ToString())
-        //        }),
-        //        Expires = DateTime.UtcNow.AddHours(1),
-        //        SigningCredentials =
-        //        new SigningCredentials(
-        //            new SymmetricSecurityKey(tokenKey),
-        //            SecurityAlgorithms.HmacSha256Signature)
-        //    };
-        //    var token = tokenHandler.CreateToken(tokenDescriptor);
-        //    return tokenHandler.WriteToken(token);
-        //}
 
         public string EncryptPassword(string Password)
         {
@@ -232,18 +197,41 @@ namespace RepositoryLayer.UserClass
                     Console.WriteLine("Access is denied. " +
                         "Queue might be a system queue.");
                 }
-                // Handle other sources of MessageQueueException.
             }
         }
 
-        public bool ChangePassword(string email,string password,string confirmPassword)
+        //    public bool ChangePassword(string email,string password,string confirmPassword)
+        //    {
+        //        try
+        //        {
+        //            if (password.Equals(confirmPassword))
+        //            {
+        //                var user = fundoo.Users.Where(x => x.email == email).FirstOrDefault();
+        //                user.password = confirmPassword;
+        //                fundoo.SaveChanges();
+        //                return true;
+        //            }
+        //            else
+        //            {
+        //                return false;
+        //            }
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            throw ex;
+        //        }
+        //    }
+
+        public bool ResetPassword(string password, string confirmpassword,string Email)
         {
             try
             {
-                if (password.Equals(confirmPassword))
+                if (password.Equals(confirmpassword))
                 {
-                    var user = fundoo.Users.Where(x => x.email == email).FirstOrDefault();
-                    user.password = confirmPassword;
+                    var user = fundoo.Users.Where(x => x.email == Email).FirstOrDefault();
+
+                    user.password = EncryptPassword(confirmpassword);
+
                     fundoo.SaveChanges();
                     return true;
                 }
@@ -252,7 +240,7 @@ namespace RepositoryLayer.UserClass
                     return false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

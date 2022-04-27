@@ -31,7 +31,9 @@ C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBac
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\MimeKit.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Bridgelabz\ASP.Net\FundooNotesBackend\FundooNotesBackend\FundooNotesBackend\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

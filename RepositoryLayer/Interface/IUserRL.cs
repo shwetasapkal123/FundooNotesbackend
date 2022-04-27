@@ -12,7 +12,8 @@ namespace RepositoryLayer.UserInterface
         // public string LoginUser(string email, string password);
         public string Login(UserLogin userLogin);
         public bool ForgetPassword(string email);
-        public bool ChangePassword(string email, string password, string confirmPassword);
+        // public bool ChangePassword(string email, string password, string confirmPassword);
+        public bool ResetPassword(string password, string confirmpassword, string Email);
 
     }
 }

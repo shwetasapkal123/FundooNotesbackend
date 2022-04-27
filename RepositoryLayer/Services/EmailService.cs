@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MimeKit;
+using MimeKit.Text;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
@@ -21,6 +23,8 @@ namespace RepositoryLayer.Services
                 msgObj.To.Add(email);
                 msgObj.From = new MailAddress("temporaryfakemail97@gmail.com");
                 msgObj.Subject = "Password Reset Link";
+
+               // msgObj.Body= new TextPart { Text = "<h1>Example HTML Message Body</h1>" };
                 msgObj.Body = $"www.FundooNotes.com/reset-password/{token}";
                 client.Send(msgObj);
             }
